@@ -2,7 +2,7 @@
 
 
 #loading{
-    background: rgb(241, 241, 241) url(/image/book_loading.gif) no-repeat center center;
+    background: rgb(241, 241, 241) url(../image/book_loading.gif) no-repeat center center;
     background-size: 15%;
     height: 100vh;
     width: 100%;
@@ -390,7 +390,7 @@ body{
 
 
 .home{      /* hình background */
-    background: url(/image/Banner3.jpg);
+    background: url(../image/Banner3.jpg);
     background-size: cover;
     background-position: center;
     height: 100rem;
