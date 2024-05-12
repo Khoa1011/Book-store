@@ -395,7 +395,7 @@ body{
 
 
 .home{      /* hình background */
-    background: url(image/Banner_book.png);
+    background: url(../image/Banner_book.png);
     background-size: cover;
     background-position: center;
     height: 100rem;
