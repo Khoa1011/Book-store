@@ -1045,6 +1045,75 @@ body{
 }
 
 
+/* menu service */
+.homeLearnMore .rowLearnMore .contentAbout .service-row{
+    padding-top: 5rem;
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.homeLearnMore .rowLearnMore .contentAbout .service-row .box{
+    width:25rem;
+    height: auto;
+    background: #EEE2FC;
+    border-radius: 20px;
+    flex: 0 0 calc(25% - 2rem); /* Chia tỷ lệ cho các hộp, với mỗi hộp chiếm 25% của không gian, trừ bớt khoảng cách giữa chúng */
+    margin: 1rem;
+}
+
+.homeLearnMore .rowLearnMore .contentAbout .service-row .box img{
+    width: 30rem;
+    height: 20rem;
+    padding: 2rem;
+}
+
+.homeLearnMore .rowLearnMore .contentAbout .service-row .box h2{
+    font-size: 1.7rem;
+    padding-left: 2rem;
+    text-align: center;
+    
+}
+.homeLearnMore .rowLearnMore .contentAbout .service-row .box p{
+    padding-left: 2rem;
+}
+
+
+
+.homeLearnMore .rowLearnMore .contentAbout .service-row .box button{
+    margin-top: 1rem;
+    align-items: center;
+    padding: .9rem 3rem;
+    border-radius: .5rem;
+    color: #fff;
+    background: #4184DD;
+    font-size: 1.7rem;
+    cursor: pointer;
+    font-weight: 500;
+    
+}
+
+.service-row .box {
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.service-row .box .btnSeemore {
+    margin-top: auto; 
+}
+
+.homeLearnMore .rowLearnMore .contentAbout .service-row .box .btnSeemore:hover{
+    transform: scale(1.1); 
+    background-color: #B7CAFE; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+}
+
+
+
 
 
 
