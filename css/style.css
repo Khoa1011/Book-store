@@ -76,11 +76,11 @@ section{
 
 .heading span {
     font-size: 3rem;
-    padding: .5rem 45%; 
+    padding: .5rem 35%; 
     color: var(--black);
-    border: 2px solid;
+    border: 3px solid;
     border-top: none; border-left: none; border-right: none;
-    
+    width: 100%;
 }
 
 
@@ -253,6 +253,7 @@ section{
 
 .header .header-2 .navbar .highlight-menu{
     background:#214D6D;
+    border-radius: 5px;
 }
 
 .header .header-2 .navbar a:hover{
@@ -366,7 +367,15 @@ body{
     text-align: center;
     width: 100%;
     margin: 1.5rem 0;
+
 }
+.login-form-container form .btn:hover{
+    transform: scale(1.1); 
+    background-color: #9CEDF9; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+}
+
+.login-form-container form .btn
 
 .login-form-container form p{
     padding-top: .8rem;
@@ -398,8 +407,9 @@ body{
     background-image: url(../image/Banner3.jpg);
     background-size: cover;
     background-position: center;
-    height: 100rem;
+    height: 100%;
 }
+
 
 .home .row{
     display: flex;
@@ -428,6 +438,22 @@ body{
 
 .home .row .book-slider a:hover img{
     transform: scale(.9);
+}
+
+/* LearnMoreAbout */
+.homeLearnMore{      /* hình background */
+    background-image: url(../image/Banner_book.png);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+.homeLearnMore .rowLearnMore{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
 }
 
 /* Hiệu ứng chuyển hình phải sang trái */
@@ -462,6 +488,7 @@ body{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
     gap: 1.5rem;
+
 }
 
 .icons-container .icons{
@@ -494,6 +521,18 @@ body{
     background-size: cover;
     background-position: center;
     height: 100rem;
+    
+}
+
+/* .product .row{
+    w
+} */
+
+.product .heading{
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
 }
 
 .product .featured-slider .box{
@@ -734,6 +773,121 @@ body{
     background-color: #9CEDF9;
 }
 
+/* menu About */
+
+.home .row .contentAbout{ 
+    flex: 1 1 42rem;
+    margin-bottom: 40px;
+}
+.home .row .contentAbout h3{
+    margin-bottom: 1.5rem;
+    color: var(--black);
+    font-size: 4.5rem;
+    position: relative;
+    color: #1B45D6;
+}
+
+.home .row .contentAbout h2{
+    font-size: 2rem;
+}
+
+.home .row .contentAbout h3::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    background-color: #41BCFC;
+}
+
+.home .row .contentAbout p{
+    color: black;
+    font-size: 1.5rem;
+    line-height: 2;
+    padding: 1rem 0;
+}
+.home .row .contentAbout .btn:hover{ 
+    transform: scale(1.1); 
+    background-color: #9CEDF9; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+}
+
+.home .row .contentAbout .imgAbout{
+    border-radius: 5px;
+}
+
+.home .row .imgAbout{
+    flex: 1;
+    margin-left: 40px;
+    overflow: hidden;
+}
+
+.home .row .imgAbout img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: 0.5s ease;
+}
+
+.home .row .imgAbout:hover img{
+    transform: scale(1.1);
+}
+
+
+/* Learn more about us */
+
+.btnLeanrMoreAbout{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    border-radius: .5rem;
+    color: #fff;
+    background: #4184DD;
+    font-size: 1.7rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btnLeanrMoreAbout:hover{
+    transform: scale(1.1); 
+    background-color: #9CEDF9; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+}
+
+.homeLearnMore .rowLearnMore .contentAbout h3{
+    margin-bottom: 1.5rem;
+    color: var(--black);
+    font-size: 4.5rem;
+    position: relative;
+    color: #1B45D6;
+}
+
+
+.homeLearnMore .rowLearnMore .contentAbout .know dt{
+    font-weight:  bold;
+    line-height: 2;
+    font-size: 2.5rem;
+    
+}
+
+.homeLearnMore .rowLearnMore .contentAbout .know dd{
+    color: black;
+    font-size: 1.8rem;
+    line-height: 2;
+    padding: 1rem 0;
+}
+
+.homeLearnMore .rowLearnMore .contentAbout h3::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    background-color: #41BCFC;
+}
+
 
 
 
@@ -762,7 +916,6 @@ body{
     section{
         padding: 3rem 2rem;
     }
-    
 }
 
 /* Tablet */
@@ -809,6 +962,7 @@ body{
     .home .row .content h3{
         font-size: 3.5rem;
     }
+    
 }
 
 /* SmartPhone */
