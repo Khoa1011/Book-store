@@ -53,6 +53,37 @@ window.addEventListener("load", function() {
   }
 });
 
+
+// $(document).ready(function(){
+//   $('.dropdown').click(function(){
+//     // Lấy submenu tương ứng với dropdown
+//     let submenu = $(this).next('.dropdown-content');
+
+//     // Kiểm tra nếu submenu đang hiển thị, thì ẩn nó đi
+//     if (submenu.hasClass('show')) {
+//       submenu.removeClass('show');
+//     } else {
+//       // Nếu submenu không hiển thị, thì hiển thị nó lên và ẩn tất cả các submenu khác
+//       $('.dropdown-content').removeClass('show');
+//       submenu.addClass('show');
+//     }
+//   });
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // window.addEventListener("DOMContentLoaded", function() {
 //   var overlay = document.getElementById("menu");
 //   if (overlay) {

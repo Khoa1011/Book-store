@@ -242,6 +242,7 @@ section{
     
 }
 
+
 .header .header-2 .navbar a{
     color:-#fff;
     display: inline-block;
@@ -271,6 +272,40 @@ body{
     height: 100%;
 }
 
+/* Dropdown menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:  #4184DD;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.header .header-2 .navbar .dropdown .dropdown-content a:hover {
+    background:#fff;
+    width: 100%;
+    color: black;
+}
+
+
+
 
 /* button phía dưới (tablet, phone) */
 .bottom-navbar{
@@ -286,13 +321,21 @@ body{
     font-size: 2.5rem;
     padding:2rem;
     color: #fff;
-
+    
 }
 
 .bottom-navbar a:hover{
     background:#214D6D;
     border-radius: 5px;
 }
+
+.bottom-navbar .dropdown .dropdown-content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
 
 /* Form login */
 .login-form-container{
@@ -308,6 +351,8 @@ body{
 }
 
 .login-form-container.active{
+    background-image: url(../image/Cat-banner.png);
+    background-size: 100%;
     right: 0;
 }
 
@@ -775,11 +820,11 @@ body{
 
 /* menu About */
 
-.home .row .contentAbout{ 
+.homeLearnMore .rowLearnMore .contentAbout{ 
     flex: 1 1 42rem;
     margin-bottom: 40px;
 }
-.home .row .contentAbout h3{
+.homeLearnMore .rowLearnMore .contentAbout h3{
     margin-bottom: 1.5rem;
     color: var(--black);
     font-size: 4.5rem;
@@ -787,11 +832,11 @@ body{
     color: #1B45D6;
 }
 
-.home .row .contentAbout h2{
+.hohomeLearnMoreme .rowLearnMore .contentAbout h2{
     font-size: 2rem;
 }
 
-.home .row .contentAbout h3::after{
+.homeLearnMore .rowLearnMore .contentAbout h3::after{
     content: "";
     position: absolute;
     width: 100%;
@@ -801,36 +846,36 @@ body{
     background-color: #41BCFC;
 }
 
-.home .row .contentAbout p{
+.homeLearnMore .rowLearnMore .contentAbout p{
     color: black;
     font-size: 1.5rem;
     line-height: 2;
     padding: 1rem 0;
 }
-.home .row .contentAbout .btn:hover{ 
+.homeLearnMore .rowLearnMore .contentAbout .btn:hover{ 
     transform: scale(1.1); 
     background-color: #9CEDF9; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
 }
 
-.home .row .contentAbout .imgAbout{
+.homeLearnMore .rowLearnMore .contentAbout .imgAbout{
     border-radius: 5px;
 }
 
-.home .row .imgAbout{
+.homeLearnMore .rowLearnMore .imgAbout{
     flex: 1;
     margin-left: 40px;
     overflow: hidden;
 }
 
-.home .row .imgAbout img{
+.homeLearnMore .rowLearnMore .imgAbout img{
     max-width: 100%;
     height: auto;
     display: block;
     transition: 0.5s ease;
 }
 
-.home .row .imgAbout:hover img{
+.homeLearnMore .rowLearnMore .imgAbout:hover img{
     transform: scale(1.1);
 }
 
@@ -888,6 +933,116 @@ body{
     background-color: #41BCFC;
 }
 
+.container-contact{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.container-contact .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-contact .contactInfo .box{
+    position: relative;
+    padding: 3rem 0;
+    display: flex;
+}
+
+.container-contact .contactInfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background: #EEE2FC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.container-contact .contactInfo .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: black;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.contactForm{
+    width: 40%;
+    padding: 40px;
+    background-color: #B7CAFE;
+}
+
+.contactForm h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline:none ;
+    resize: none;
+}
+
+.contactForm .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span
+{
+    
+    color: #C904C6;
+    font-size: 1.5rem;
+    transform: translateY(-30px);
+}
+
+.contactForm .inputBox input[type="submit"]{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    border-radius: .5rem;
+    color: #fff;
+    background: #6957AA;
+    font-size: 1.7rem;
+    cursor: pointer;
+    font-weight: 500;
+    border: none;
+}
+
+.contactForm .inputBox input[type="submit"]:hover{
+    transform: scale(1.1); 
+    background-color: #B7CAFE; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+}
 
 
 
