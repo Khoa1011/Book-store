@@ -248,6 +248,11 @@ section{
     padding: 1.2rem;
     font-size: 1.7rem;
     color: #BEEEEA;
+    
+}
+
+.header .header-2 .navbar .highlight-menu{
+    background:#214D6D;
 }
 
 .header .header-2 .navbar a:hover{

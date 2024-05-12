@@ -73,39 +73,39 @@ window.addEventListener("load", function() {
 
 
 
-let previewContainer = document.querySelector('.product-preview');
-let previewBox = previewContainer.querySelectorAll('.preview active');
-let closeBtns = previewContainer.querySelectorAll('#close-details-btn');
+// let previewContainer = document.querySelector('.product-preview');
+// let previewBox = previewContainer.querySelector('.preview .active');
+// let closeBtns = previewContainer.querySelectorAll('#close-details-btn');
 
 
-let productContainer = document.querySelector('.product');
-let featuredSlider = productContainer.querySelector('.featured-slider');
-let prd = featuredSlider.querySelectorAll('.prd');
-// Xử lý khi nhấp vào nút đóng
-closeBtns.forEach(closeBtn => {
-  closeBtn.onclick = () => {
-    previewContainer.style.display='none';
-  };
-});
+// let productContainer = document.querySelector('.product');
+// let featuredSlider = productContainer.querySelector('.featured-slider');
+// let prd = featuredSlider.querySelectorAll('.prd');
+// // Xử lý khi nhấp vào nút đóng
+// closeBtns.forEach(closeBtn => {
+//   closeBtn.onclick = () => {
+//     previewContainer.style.display='none';
+//   };
+// });
 
 
-// Xử lý khi nhấp vào nút "Learn more"
-prd.forEach(btn => {
-  btn.onclick = () => {
-    previewContainer.style.display ='flex';
-    previewBox.style.display='inline-block';
-    let name = btn.getAttribute('data-name');
-    previewBox.forEach(preview => {
-      let Target = preview.getAttribute('data-target');
-      if (name === Target) {
-        preview.classList.add('active');
+// // Xử lý khi nhấp vào nút "Learn more"
+// prd.forEach(btn => {
+//   btn.onclick = () => {
+//     previewContainer.style.display ='flex';
+//     previewBox.style.display='inline-block';
+//     let name = btn.getAttribute('data-name');
+//     previewBox.forEach(preview => {
+//       let Target = preview.getAttribute('data-target');
+//       if (name === Target) {
+//         preview.classList.add('active');
         
-      } else {
-        preview.classList.remove('active'); // Ẩn các chi tiết sản phẩm khác nếu có
-      }
-    });
-  };
-});
+//       } else {
+//         preview.classList.remove('active'); // Ẩn các chi tiết sản phẩm khác nếu có
+//       }
+//     });
+//   };
+// });
 
 
 
