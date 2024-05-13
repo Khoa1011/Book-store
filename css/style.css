@@ -1210,8 +1210,90 @@ body{
 
 
 
+/* cart */
+.homeLearnMore .cart-pages {
+    margin: 2rem auto; 
+}
+
+.homeLearnMore .cart-pages table{
+    width: 100%;
+    border-collapse: collapse;
+}
 
 
+th {
+    padding: 1.5rem; 
+    font-size: 2.5rem; 
+    color: #fff;
+    background: #DA1F40;
+    text-align: left;
+}
+
+td {
+    padding: 1rem; 
+    font-size: 2rem; 
+}
+
+td input {
+    width: 5rem;
+    height: 3rem;
+    padding: 0.5rem;
+    border: 1px solid;
+    margin-left: 1rem;
+}
+
+td a {
+    color: red;
+}
+
+td img {
+    width: 15rem; 
+    height: 15rem; 
+    margin-right: 1.5rem; 
+}
+
+.cart-info .cart-content p {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.cart-info .cart-content span,
+.cart-info .cart-content a {
+    font-size: 1.6rem; 
+}
+
+.total-price {
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.total-price table {
+    max-width: 40rem;
+    border-top: 3px solid #DA1F40;
+}
+
+th:last-child,
+td:last-child {
+    text-align: right;
+}
+
+.cart-pages table tr:not(:last-child) {
+    border-bottom: 2px solid #ddd; /* Thêm đường viền dưới cho mỗi hàng, trừ hàng cuối cùng */
+}
+
+
+.homeLearnMore .cart-pages .payProduct{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.homeLearnMore .cart-pages .payProduct .btn:hover{
+    transform: scale(1.1); 
+    background-color: #B7CAFE; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+}
 
 
 
