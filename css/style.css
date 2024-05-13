@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,700&display=swap');
 
-
+/* 
 #loading{
     background: rgb(241, 241, 241) url(../image/book_loading.gif) no-repeat center center;
     background-size: 15%;
@@ -8,7 +8,9 @@
     width: 100%;
     position: fixed;
     z-index: 100;
-}
+} */
+
+
 
 
 :root{
@@ -977,6 +979,7 @@ body{
     width: 40%;
     padding: 40px;
     background-color: #B7CAFE;
+    border-radius: 2rem;
 }
 
 .contactForm h2{
@@ -1111,6 +1114,101 @@ body{
     background-color: #B7CAFE; 
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
 }
+
+/* Footer */
+.footer .box-containerFooter{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+    gap: 1.5rem;
+}
+
+.footer .box-containerFooter .box h3{
+    font-size: 2.2rem;
+    color: var(--black);
+    padding: 1rem 0;
+}
+
+.footer .box-containerFooter .box a{
+    display: block;
+    font-size: 1.4rem;
+    color: var(--black);
+    padding: 1rem 0;
+
+}
+
+.footer .box-containerFooter .box a i{
+    color: #21C9F3;
+    padding-right: .5rem;
+}
+
+.footer .box-containerFooter .box a:hover i{
+    padding-right: 2rem;
+}
+
+.footer .box-containerFooter .box .map{
+    width: 100%;
+
+}
+
+.footer .share{
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.footer .share i{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: #fff;
+    background: #21C9F3;
+    margin: 0 .3rem;
+    border-radius: 50%;
+}
+
+.footer .share i:hover{
+    background: var(--light-color);
+}
+
+.footer .credit{
+    border-top: var(--border);
+    margin-top: 2rem;
+    padding: 0 1rem;
+    padding-top: 2.5rem;
+    font-size: 2rem;
+    color: var(--light-color);
+    text-align: center;
+}
+
+.footer .credit span{
+    color: #C904C6;
+
+}
+
+
+/* Loading pages */
+.loading-container{
+    position: fixed;
+    top: 0;left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    background: rgb(241, 241, 241);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.loading-container.active{
+    display: none;
+}
+
+.loading-container img{
+    height: 25rem;
+}
+
+
 
 
 

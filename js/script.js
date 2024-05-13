@@ -31,27 +31,26 @@ window.onscroll=()=>{
 }
 
 window.onload=()=>{
-    if(window.scrollY>80){ 
+    if(window.scrollY > 80){ 
     document.querySelector('.header .header-2').classList.add('active');
     }else{
         document.querySelector('.header .header-2').classList.remove('active');
     }
+
+    fadeOut();
+
 }
 
+// Loading
+function loader(){
+  document.querySelector('.loading-container').classList.add('active');
 
+}
 
-// Chờ trang tải xong
-window.addEventListener("load", function() {
-  // Tìm phần tử loader theo id
-  var loader = document.getElementById("loading");
-  // Kiểm tra xem phần tử loader có tồn tại không và nếu display của nó không phải là none
-  if (loader && window.getComputedStyle(loader).display !== "none") {
-      // Đợi 4 giây trước khi ẩn phần tử loader
-      setTimeout(function() {
-          loader.style.display = "none";
-      }, 4000);
-  }
-});
+function fadeOut(){
+  setTimeout(loader,4000);
+}
+
 
 
 // $(document).ready(function(){
@@ -69,38 +68,6 @@ window.addEventListener("load", function() {
 //     }
 //   });
 // });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// window.addEventListener("DOMContentLoaded", function() {
-//   var overlay = document.getElementById("menu");
-//   if (overlay) {
-//       overlay.style.display = "none";
-//       document.body.style.overflow = "hidden";
-//   }
-
-//   var loader = document.getElementById("loading");
-//   if (loader && window.getComputedStyle(loader).display !== "none") {
-//       setTimeout(function() {
-//           loader.style.display = "none";
-//           document.body.style.overflow = "auto"; // Đặt lại overflow thành "auto" khi ẩn loader
-//       }, 4000);
-//   }
-// });
-
-
 
 
 
