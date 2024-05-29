@@ -14,11 +14,7 @@ document.querySelector('#close-login-btn').onclick = () =>{
     loginForm.classList.remove('active');
 }
 
-document.querySelectorAll('.btn, .btnLeanrMore').forEach(item => {
-  item.addEventListener('click', function(event) {
-      event.preventDefault(); // Ngăn chặn hành vi mặc định
-  });
-});
+
 
 
 window.onscroll=()=>{
