@@ -54,58 +54,6 @@ function fadeOut(){
 
 
 
-// $(document).ready(function(){
-//   $('.dropdown').click(function(){
-//     // Lấy submenu tương ứng với dropdown
-//     let submenu = $(this).next('.dropdown-content');
-
-//     // Kiểm tra nếu submenu đang hiển thị, thì ẩn nó đi
-//     if (submenu.hasClass('show')) {
-//       submenu.removeClass('show');
-//     } else {
-//       // Nếu submenu không hiển thị, thì hiển thị nó lên và ẩn tất cả các submenu khác
-//       $('.dropdown-content').removeClass('show');
-//       submenu.addClass('show');
-//     }
-//   });
-// });
-
-
-
-// let previewContainer = document.querySelector('.product-preview');
-// let previewBox = previewContainer.querySelector('.preview .active');
-// let closeBtns = previewContainer.querySelectorAll('#close-details-btn');
-
-
-// let productContainer = document.querySelector('.product');
-// let featuredSlider = productContainer.querySelector('.featured-slider');
-// let prd = featuredSlider.querySelectorAll('.prd');
-// // Xử lý khi nhấp vào nút đóng
-// closeBtns.forEach(closeBtn => {
-//   closeBtn.onclick = () => {
-//     previewContainer.style.display='none';
-//   };
-// });
-
-
-// // Xử lý khi nhấp vào nút "Learn more"
-// prd.forEach(btn => {
-//   btn.onclick = () => {
-//     previewContainer.style.display ='flex';
-//     previewBox.style.display='inline-block';
-//     let name = btn.getAttribute('data-name');
-//     previewBox.forEach(preview => {
-//       let Target = preview.getAttribute('data-target');
-//       if (name === Target) {
-//         preview.classList.add('active');
-        
-//       } else {
-//         preview.classList.remove('active'); // Ẩn các chi tiết sản phẩm khác nếu có
-//       }
-//     });
-//   };
-// });
-
 
 
 
