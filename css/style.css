@@ -805,6 +805,41 @@ body{
     margin-left: 5rem;
 }
 
+/* Bài tập thực hành */
+.container-exercise {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.container-exercise .lab {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container-exercise .lab a{
+    font-size: 3rem;
+    color: red;
+    
+}
+
+.container-exercise .lab a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
 
 
  
