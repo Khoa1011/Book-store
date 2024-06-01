@@ -1,18 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,700&display=swap');
 
-/* 
-#loading{
-    background: rgb(241, 241, 241) url(../image/book_loading.gif) no-repeat center center;
-    background-size: 15%;
-    height: 100vh;
-    width: 100%;
-    position: fixed;
-    z-index: 100;
-} */
-
-
-
-
 :root{
     --green: #27ae60;
     --dark-color:#219150;

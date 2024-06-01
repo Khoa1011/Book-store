@@ -26,6 +26,8 @@ window.onscroll=()=>{
     }
 }
 
+
+// Loading
 window.onload=()=>{
     if(window.scrollY > 80){ 
     document.querySelector('.header .header-2').classList.add('active');
@@ -34,13 +36,10 @@ window.onload=()=>{
     }
 
     fadeOut();
-
 }
 
-// Loading
 function loader(){
   document.querySelector('.loading-container').classList.add('active');
-
 }
 
 function fadeOut(){
