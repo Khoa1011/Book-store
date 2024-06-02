@@ -1190,7 +1190,8 @@ body{
 }
 
 .footer .box-containerFooter .box .map{
-    width: 100%;
+    width: 30rem;
+    height: 30rem;
 
 }
 

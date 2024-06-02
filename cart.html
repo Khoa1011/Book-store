@@ -167,7 +167,7 @@
 
                 <tr>
                     <td>Tạm tính</td>
-                    <td>300.000</td>
+                    <td>0</td>
                 </tr>
 
                 <tr>
@@ -177,7 +177,7 @@
 
                 <tr>
                     <td>Tổng tiền</td>
-                    <td>250.000</td>
+                    <td>0</td>
                 </tr>
 
             </table>
@@ -270,7 +270,8 @@
             <a href="#"><i class="fas fa-phone"></i>+123-456-7890</a>
             <a href="#"><i class="fas fa-phone"></i>+111-222-3330</a>
             <a href="#"><i class="fas fa-envelope"></i>thukhoa1011@gmail.com</a>
-            <img src="./image/map-world.png" class="map" alt="">
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.953999521037!2d106.67529067458874!3d10.738028859901721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752fad027e3727%3A0x2a77b414e887f86d!2zMTgwIMSQLiBDYW8gTOG7lywgUGjGsOG7nW5nIDQsIFF14bqtbiA4LCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1717355166755!5m2!1svi!2s" 
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
     </div>
@@ -283,7 +284,7 @@
         <a href="#" target="_blank"><i class="fa-brands fa-discord"></i></a>
     </div>
 
-    <div class="credit">Truong Thu Khoa <span>DH52106310</span> D21_TH03</div>
+    <div class="credit">Truong Thu Khoa <span>DH52106310</span> D21_TH03 T2C1</div>
 
 
 </section>
@@ -311,23 +312,23 @@
 
 function formatVND(value) {
     return value.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
-}
+}   //nhận một giá trị số và chuyển đổi nó thành chuỗi định dạng tiền tệ theo định dạng VND
 
 
-function updateTotals() {
+function updateTotals() { // Cập nhật tổng giá trị đơn hàng
     const rows = document.querySelectorAll('.cart-pages table tr');
     let subTotal = 0;
 
-    rows.forEach((row, index) => {
+    rows.forEach((row, index) => { //Lặp qua các hàng trong giỏ hàng 
         if (index === 0) return; 
 
-        const priceElement = row.querySelector('.price');
-        const quantityElement = row.querySelector('.quantity');
-        const totalElement = row.querySelector(`#total${index}`);
+        const priceElement = row.querySelector('.price'); // Giá sản phẩm
+        const quantityElement = row.querySelector('.quantity'); //Số lượng sản phẩm
+        const totalElement = row.querySelector(`#total${index}`); // Tổng tiền
 
-        if (priceElement && quantityElement && totalElement) {
-            const price = parseFloat(priceElement.innerText.replace(',', '').trim());
-            const quantity = parseInt(quantityElement.value, 10);
+        if (priceElement && quantityElement && totalElement) { 
+            const price = parseFloat(priceElement.innerText.replace(',', '').trim()); //Ép kiểu chuỗi sang số và bỏ dấy , và khoảng trắng
+            const quantity = parseInt(quantityElement.value, 10); //Ép kiểu chuỗi sang số 
             const total = price * quantity;
 
             subTotal += total;
@@ -336,17 +337,17 @@ function updateTotals() {
     });
 
 
-    const discount = 50000; 
+    const discount = 50000; //Giả sử được giảm giá 50.000
     const finalTotal = subTotal - discount;
 
 
-    document.querySelector('.total-price tr:nth-child(1) td:nth-child(2)').innerText = formatVND(subTotal);
-    document.querySelector('.total-price tr:nth-child(3) td:nth-child(2)').innerText = formatVND(finalTotal);
+    document.querySelector('.total-price tr:nth-child(1) td:nth-child(2)').innerText = formatVND(subTotal); //Cập nhật vào tổng tạm tính
+    document.querySelector('.total-price tr:nth-child(3) td:nth-child(2)').innerText = formatVND(finalTotal); //Cập nhật vào tổng tiền sau khi được giảm giá
 }
 
 
 const quantityInputs = document.querySelectorAll('.quantity');
-quantityInputs.forEach(input => {
+quantityInputs.forEach(input => { // Lấy số lượng trong ô input của từng sản phẩm 
     input.addEventListener('input', updateTotals);
 });
 
